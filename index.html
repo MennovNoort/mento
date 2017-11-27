@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mento</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Raleway" rel="stylesheet">
+	<script>
+	
+		$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 500, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+		
+	</script>
+</head>
+
+<body>
+    <div id="banner">
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+			  <a class="navbar-brand" href="index.html"><img src="images/mento.png" alt="logo" id="logo"></a>
+			 <ul class="nav navbar-nav navbar-right">
+			  <li><a href="#offers">Diensten</a></li>
+			  <li><a href="#about">Over ons</a></li>
+			  <li><a href="#vacatures">Vacatures</a></li>
+			</ul>
+		  </div>
+		</nav>
+            <div id="banner-content">
+                <h3 id="banner-h3">Website naar wens</h3>
+				<h4 id="banner-h4">Mento is een bedrijf wat bestaat uit twee developers met een hoop verstand van coderen en designen.</h4>
+            </div>
+    </div>  
+    <div id="offers">
+		<div id="offer-content">
+			<div class="offer">
+				<img src="images/translation.png"><h2>Online branding</h2><p>Wij helpen met de online branding van onze klanten en zorgen voor onder andere een logo, een huistijl en eventuele verpakkingen.</p>
+			</div>
+			<div class="offer" id="offer2">
+				<img src="images/coding.png">
+				<h2>Design &amp; coderen</h2><p>Wij focussen ons op het desingen van en coderen van de gevraagde producten op basis van de gekozen branding.</p>
+			</div>
+			<div class="offer" id="offer3">
+				<img src="images/stats.png"><h2>Vooruitgang</h2><p>De vooruitgang van onze klanten is ons doel. Deze meten wij door middel van Google Analytics en wij stellen de klant op de hoogte wanneer het doel bereikt is.</p>
+			</div>
+			
+		</div>
+    </div>
+	<div id="about">
+		<div id="about-opacity">
+			<h2 style="color: white;">Over ons</h2>
+			<div id="about-content">
+			
+				<p>Mento is ontstaan in September 2017. Het bedrijf is opgericht door Menno van Noort en Tom van der Berg. Wat ons unique maakt is dat wij gespecialiseerd zijn in coderen, maar ook erg goed kunnen ontwerpen. Tom doet vooral de front-end van een website en Menno doet de back-end.</p>
+			</div>
+		</div>
+	</div>
+	
+	
+    <div id="portfolio">
+        
+		<div id="works">
+			<h2 style="color:black;">Ons werk</h2>
+			<a href="http://21897.hosts.ma-cloud.nl/bewijzenmap/jaar2/periode1/The_Band/" target="_blank"><div class="work"><img src="images/yellowclaw.png"><div class="work-opacity">
+				<p class="work-text">Dit is een project van Tom, waarbij we een website mochten maken van onze favoriete artiest(en).</p></div></div></a>
+			
+			<a href="http://21897.hosts.ma-cloud.nl/iProject" target="_blank"><div class="work"><img src="images/sportify.png"><div class="work-opacity">
+				<p class="work-text">Dit is een project waarbij wij zelf mochten kiezen wat wij konden maken. Tom en ik (Menno) hadden hier een voetbal prediction website gemaakt, waar mensen tips kunnen geven van voetbalwedstrijden. Hierbij deed ik de Back-end</p></div></div></a>
+			
+		<!--	<div class="work"><img src="images/banner-laptop.jpg"><div class="work-opacity">
+				<p class="work-text">Dit is mijn werk</p></div></div>
+			<div class="work"><img src="images/banner-laptop.jpg"><div class="work-opacity">
+				<p class="work-text">Dit is mijn werk</p></div></div>-->
+		</div>
+    </div>
+	
+	<div id="vacatures">
+		<h2>Vacatures</h2><br>
+		<h4 style="text-align:center;">Wil je jezelf aansluiten bij ons team?</h4><br><p style="text-align:center;">Wij zijn op zoek naar developers voor ons bedrijf. Klik op de knop voor de vacature.</p><button><a href="Vacature_stage.docx" download>DOWNLOAD</a></button>
+	</div>
+	
+	<div style="background-color:#f4f4f4;width: 100%;height: auto;padding:50px 0;" id="contact">
+		<form method="post" action="contact.php">
+			<div style="width:40%;margin: 0 auto;display: block;" id="contact-content">
+				<h2>Contact</h2><br>
+				<label>Naam:</label><br>
+				<input style="width:100%; padding:5px;height:40px; font-size:20px;" class="velden" name="name" required="required" placeholder="Typ hier">
+				<br/>
+				<br/>
+
+				<label>Email:</label><br>
+				<input style="width:100%; padding:5px;height:40px; font-size:20px;" class="velden" name="email" type="email" required="required" placeholder="Typ hier">
+				<br/>
+				<br/>
+				
+				<label>Bedrijf:</label><br>
+				<input style="width:100%; height:40px; padding:5px;font-size:20px;" class="velden" name="company" required="required" placeholder="Typ hier">
+				<br/>
+				<br/>
+				
+				<label>Bericht:</label><br>
+				<textarea style="width:100%; padding:5px;height:60px; font-size:20px;" class="velden" name="message" required="required" placeholder="Typ hier"></textarea>
+				<br/>
+				<br/>
+				<br/>
+
+				<input style="width:25%;margin:0 auto;display:block; height:40px; font-size:20px;" class="buttons" id="submit" name="submit" type="submit" value="Verzenden">
+			</div>
+		</form>
+	</div>
+	
+	<div id="footer">
+        <h1><span id="toUs2" class="nospacing"><a style="color:white;" href="#offers">Diensten</a></span> <span id="toTeam2" class="spacing"><a style="color:white;" href="#about">Over ons</a></span> <span id="toVacatures2" class="spacing"><a style="color:white;" href="#vacatures">Vacatures</a></span></h1>
+        <h2>NOTE! dit is een schoolproject en geen officieel bedrijf!</h2>
+        <h2>&copy; 2017 Mento - All rights reserved</h2>
+    </div>
+</body>
+</html>
